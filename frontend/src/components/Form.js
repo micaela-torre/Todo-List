@@ -45,33 +45,32 @@ function Form() {
       <>
         { !visibleList &&
           <form className="form" onSubmit={()=> setVisibleList(true)}>
-            <h3>Ingrese la actividad</h3>
             <div>
-                <label htmlFor="product">Producto:</label>
+                <label htmlFor="product">Product:</label>
                 <input type="text" name="product" onChange={inputHandlerValue}/>
             </div>
             <div>
-            <label htmlFor="task">Tipo de Tarea:</label>
+            <label htmlFor="task">Task Type:</label>
               <select name='task' onChange={inputHandlerValue}>
-                <option>Elige una opción</option>
-                <option value="increase">Aumento de precio</option>
-                <option value="discount">Descuento de precio</option>
-                <option value="remove">Baja del producto</option>
-                <option value="pause">Pausa del Producto</option>
+                <option>Choose an option</option>
+                <option value="increase">Price increase</option>
+                <option value="discount">Price discount</option>
+                <option value="remove">Product recall</option>
+                <option value="pause">Product pause</option>
               </select>
             </div>
             <div>
-              <label htmlFor="name">Titulo de Tarea:</label>
+              <label htmlFor="name">Task title:</label>
               <input type="text" name="name" onChange={inputHandlerValue}/>
             </div>
             <div>
-              <label htmlFor="date">Fecha y Hora:</label>
+              <label htmlFor="date">Date and Time:</label>
                 <input type="date" id="start" name="date" min="2021-12-01" max="2021-12-31" onChange={inputHandlerValue}/>
                 <input type="time" name="time" onChange={inputHandlerValue}/>
             </div>
             <div>
-              <button onClick={submitHandler}>Cargar</button>
-              <button onClick={()=> setVisibleList(true)}>ver lista</button>
+              <button onClick={submitHandler}>Send</button>
+              <button style={{background:"orange"}} onClick={()=> setVisibleList(true)}>Go to List!</button>
             </div>
           </form>
         }
