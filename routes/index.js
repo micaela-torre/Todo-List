@@ -14,9 +14,9 @@ router
     .route("/getActivities")
     .get(activitiesControllers.getActivities)
 
-// router
-//   .route("/getInProgress")
-//   .get(activitiesControllers.getInProgress)
+router
+    .route("/update-status/:id")
+    .put(activitiesControllers.updateActivity)
 
 
 module.exports = router

@@ -1,5 +1,4 @@
 import React from 'react'
-// import List from './pages/List';
 import Form from '../components/Form';
 
 function Home() {
